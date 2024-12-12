@@ -1,6 +1,7 @@
 import React, { type FC } from 'react'
-import { Image, Text, View, StyleSheet, Dimensions, TouchableOpacity } from 'react-native'
+import { Text, View, StyleSheet, Dimensions, TouchableOpacity } from 'react-native'
 import { type PokemonCard as PokemonCardType } from '../../../redux/features/pokemon/pokemonTypes'
+import { Image } from 'expo-image'
 import { useNavigation } from '@react-navigation/native'
 import { Routes } from '../../../navigation/routes'
 import { type RootParamList } from '../../../navigation/types'
@@ -21,11 +22,11 @@ export const PokemonCard: FC<PokemonCardProps> = ({ item, index }) => {
 
   return (
     <TouchableOpacity
-      onPress={() => navigate(Routes.PokemonDetailPage, { pokemon: item })}
+      onPress={() => navigate(Routes.PokemonDetailPage, { id: item.id })}
       style={[styles.cardContainer, isEven ? styles.evenCard : styles.oddCard]}
     >
       <View style={[styles.card, { width: cardWidth }]}>
-        <Image source={{ uri: item.images.small }} style={styles.cardImage} />
+        <Image transition={100} style={styles.cardImage} source={{ uri: item.images?.large }} />
         <Text style={styles.pokemonName}>{item.name}</Text>
       </View>
     </TouchableOpacity>
