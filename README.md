@@ -13,7 +13,7 @@ Bu projeyi çalıştırmak için aşağıdaki yazılımların bilgisayarınızda
 Projeyi yerel makinenize klonlayın:
 
 ```
-git clone https://github.com/2ez4salt/br-pokemon
+git clone https://github.com/p1slt/br-pokemon
 ```
 
 ```
