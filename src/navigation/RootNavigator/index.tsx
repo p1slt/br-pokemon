@@ -8,7 +8,7 @@ import { type RootParamList } from '../types'
 const Stack = createNativeStackNavigator<RootParamList>()
 export const RootNavigator = () => {
   return (
-    <Stack.Navigator screenOptions={{ headerShown: false }}>
+    <Stack.Navigator>
       <Stack.Screen name={Routes.PokemonCardsList} component={PokemonCardsListScreen} />
       <Stack.Screen name={Routes.PokemonDetailPage} component={PokemonDetailScreen} />
     </Stack.Navigator>

@@ -1,4 +1,4 @@
 export enum Routes {
-    PokemonCardsList = 'PokémonCardsList',
+    PokemonCardsList = 'PokemonCardsList',
     PokemonDetailPage = 'PokemonDetailPage'
 }
